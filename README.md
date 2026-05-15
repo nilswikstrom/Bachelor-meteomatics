@@ -1,8 +1,6 @@
-# Bachelor-meteomatics
-For bachelor-thesis with support of NORCE Reasearch and Meteomatics
-# Code Appendix: [Master's Thesis Title]
+# Code Appendix: FREYA - Meteomatics Bachelor
 
-This repository contains the source code developed as part of the bachelor's thesis *"[Title]"* at The Norwegian Cyber Defense University College, submitted May 2026.
+This repository contains the source code developed as part of the bachelor's thesis *"[Title]"* at The Norwegian Cyber Defense University College, submitted May 2026. The thesis was made in collaboration with NORCE Research and Meteomatics.
 
 ## Authors
 
@@ -32,14 +30,14 @@ For a full description of the system architecture, design choices, and results, 
 **Python:** version 3.11 or newer, and the following packages:
 
 ```
-requests
-
-mgrs
+requests mgrs
 ```
 
 Install required packages with:
 
-```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
 **PowerShell:** version 5.1 or 7.x. Some scripts may require setting the execution policy:
 
