@@ -31,14 +31,21 @@ For a full description of the system architecture, design choices, and results, 
 
 **Python:** version 3.11 or newer, and the following packages:
 
-```requests, mgrs```
+```
+requests
+
+mgrs
+```
 
 Install required packages with:
-pip install -r requirements.txt
+
+```pip install -r requirements.txt```
 
 **PowerShell:** version 5.1 or 7.x. Some scripts may require setting the execution policy:
 
+```
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 
 ## Usage
 
