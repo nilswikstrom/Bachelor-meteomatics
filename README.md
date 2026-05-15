@@ -29,7 +29,12 @@ For a full description of the system architecture, design choices, and results, 
 
 ## Dependencies
 
-**Python:** version 3.11 or newer. Install required packages with:
+**Python:** version 3.11 or newer, and the following packages:
+
+requests
+mgrs
+
+Install required packages with:
 pip install -r requirements.txt
 
 **PowerShell:** version 5.1 or 7.x. Some scripts may require setting the execution policy:
