@@ -4,10 +4,10 @@
 # ============================================================
 
 # --- KONFIGURASJON: fyll inn dine egne stier her ---
-$loggMappe  = "C:\ProgramData\KDA\ODIN_FSS\logs\Fire Support XML Log"                          # Mappe der XML-filene ligger
-$outputFil  = "E:\Bachelor\ODIN-loghogger\treffbilde_logg.csv"         # Samlet loggfil (CSV)
+$loggMappe  = "C:\ProgramData\KDA\ODIN_FSS\logs\Fire Support XML Log"  # Folder where XML-files are found
+$outputFil  = "E:\Bachelor\ODIN-loghogger\treffbilde_logg.csv"         # Path to collected logfile (CSV)
 
-# Filnavn som skal leses (i ønsket rekkefølge: mål 1, 2, 3)
+# File names that needs to be read (in preferred order: target 1, 2, 3)
 $xmlFiler = @(
     "AA0001_Solution_fixed_and_status.xml",
     "AA0002_Solution_fixed_and_status.xml",
@@ -16,35 +16,36 @@ $xmlFiler = @(
 
 # ------------------------------------------------------------
 
-# Sørg for at output-mappen finnes
+# Making sure that the output-folder exists
 $outputMappe = Split-Path -Parent $outputFil
 if (-not (Test-Path $outputMappe)) {
     New-Item -ItemType Directory -Path $outputMappe -Force | Out-Null
 }
 
-# Hvis output-filen ikke finnes fra før, lag den med kolonneoverskrifter
+
+# If the output file does not exist already, create it and include column titles
 if (-not (Test-Path $outputFil)) {
     "DTG;Maal;AA;Range;Cross" | Out-File -FilePath $outputFil -Encoding UTF8
 }
 
-# Hjelpefunksjon: gjør om "202605082016023" til DTG-format "082016Z MAY 26"
+# Helperfunction: Translating "202605082016023" to DTG-format "082016Z MAY 26"
 function Format-Solutiontime {
     param([string]$raaTid)
 
     if ($raaTid.Length -ge 12) {
-        $aar    = $raaTid.Substring(2, 2)   # to siste sifre i året
-        $maaned = $raaTid.Substring(4, 2)
+        $aar    = $raaTid.Substring(2, 2)   # two last numbers in the year
+        $maaned = $raaTid.Substring(4, 2)   #
         $dag    = $raaTid.Substring(6, 2)
         $time   = $raaTid.Substring(8, 2)
         $min    = $raaTid.Substring(10, 2)
 
-        # NATO månedsforkortelser (engelsk, store bokstaver)
+        # NATO month-abbreviations (english, capital letters)
         $manederNATO = @('JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC')
         $maanedTekst = $manederNATO[[int]$maaned - 1]
 
         return "$dag$time$min`Z $maanedTekst $aar"
     }
-    return $raaTid  # returner rådata hvis formatet er uventet
+    return $raaTid  # Returns rawdata if the format is unexpected
 }
 
 Write-Host "Henter ut treffbilde fra $($xmlFiler.Count) filer..." -ForegroundColor Cyan
