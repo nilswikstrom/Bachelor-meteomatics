@@ -23,7 +23,7 @@ from matplotlib.lines import Line2D
 # KONFIGURASJON
 # ============================================================================
 
-FILE = "/home/yuki/Downloads/testmatrise.xlsx"
+FILE = "PATH-TO-FILE/testmatrise.xlsx"
 
 # Ta med høybane i plottet? False = kun lavbane (anbefalt for hovedanalyse)
 INCLUDE_HIGH = False
@@ -127,7 +127,7 @@ print(f"Antall datapunkter etter filtrering: {len(data)}")
 # ============================================================================
 
 SOURCE_COLORS = {
-    "Drone (Meteomatics)": "#1f77b4",
+    "Drone": "#1f77b4",
     "METGM":               "#2ca02c",
     "METGC":               "#d62728",
     "ICAO (no weather)":   "#7f7f7f",
