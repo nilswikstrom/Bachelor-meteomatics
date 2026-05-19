@@ -1,3 +1,5 @@
+## Script to fetch METGM-files from MET (Meteorologisk institutt)
+
 import os
 import time
 import requests
@@ -6,38 +8,15 @@ from datetime import datetime, timedelta
 # Fyll inn ønskede tidspunkt i Zulu-tid (UTC)
 # Format: "YYYY-MM-DDTHH:MMZ"
 TIDSPUNKT = [
-    # "2026-04-10T07:18Z",
-    # "2026-04-13T09:24Z",
-    # "2026-04-14T06:12Z",
-    # "2026-04-15T06:06Z",
-    # "2026-04-16T06:06Z",
-    # "2026-04-17T06:00Z",
-    # "2026-04-20T06:06Z",
-    # "2026-04-21T06:06Z",
-    # "2026-04-22T06:12Z",
-    # "2026-04-23T06:12Z",
-    # "2026-04-24T06:06Z",
-    # "2026-04-28T11:12Z",
-    # "2026-04-29T07:36Z",
-    # "2026-04-30T06:38Z",
-    "2026-05-05T15:00Z",
-    "2026-05-06T03:00Z",
-    "2026-05-06T15:00Z",
-    "2026-05-07T03:00Z",
-    "2026-05-07T15:00Z",
-    "2026-05-08T03:00Z",
-    "2026-05-08T15:00Z",
-    "2026-05-09T03:00Z",
-    "2026-05-09T15:00Z",
-    "2026-05-10T03:00Z",
-    "2026-05-10T15:00Z",
-    "2026-05-11T03:00Z",
-    "2026-05-11T15:00Z",
+    "YYYY-MM-DDTHH:MM:SSZ", #start-time
+    "YYYY-MM-DDTHH:MM:SSZ", #start-time
+    "YYYY-MM-DDTHH:MM:SSZ", #start-time
+    # etc. as many timeslots as you want
 ]
 
-AREA    = "setermoen"
+AREA    = "NAME-OF-LOCATION"
 OUTPUT  = "MetInst/API/metgm_filer"   # Mappe filene lagres i (opprettes automatisk)
-HEADERS = {"User-Agent": "Bachelor-Meteomatics niwikstrom@mil.no"}
+HEADERS = {"User-Agent": "Session-name mail@example.com"}
 KJØRETIDER = [3, 9, 15, 21]  # UTC-timer METGM produseres
 
 def nærmeste_kjøretid(dt):
