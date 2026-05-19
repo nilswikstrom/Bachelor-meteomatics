@@ -2,7 +2,7 @@
 sender_test_runner_metgm.py — Automated test runner for METGM UDP file transfers.
 
 Runs (N files) x 3 redundancy levels x 25 runs per configuration.
-Reads all METGM files from METGM/andøya/ and METGM/setermoen/.
+Reads all METGM files from METGM/LOCATION-NAME-1/ and METGM/LOCATION-NAME-2/.  ## PLACEHOLDER NAMES
 
 Usage:
     python sender_test_runner_metgm.py --ip 172.16.3.40 --port 5001 --config metgm_baseline
@@ -13,9 +13,9 @@ File layout expected:
     ├── sender_test_runner_metgm.py
     ├── sender_udp.py
     ├── METGM/
-    │   ├── andøya/
+    │   ├── LOCATION-NAME-1/  ## PLACEHOLDER NAMES
     │   │   └── <metgm files>
-    │   └── setermoen/
+    │   └── LOCATION-NAME-2/  ## PLACEHOLDER NAMES
     │       └── <metgm files>
     └── logs/
         └── sender_metgm_baseline.csv
@@ -65,9 +65,9 @@ def script_dir() -> str:
 
 
 def load_test_files() -> list:
-    """Return sorted list of (label, filepath, filesize) from METGM/andøya/ and METGM/setermoen/."""
+    """Return sorted list of (label, filepath, filesize) from METGM/LOCATION-NAME-1/ and METGM/LOCATION-NAME-2/."""  ## PLACEHOLDER NAMES
     metgm_dir = os.path.join(script_dir(), "METGM")
-    subfolders = ["andøya", "setermoen"]
+    subfolders = ["LOCATION-NAME-1", "LOCATION-NAME-2"]  ## PLACEHOLDER NAMES
 
     files = []
     for subfolder in subfolders:
@@ -82,7 +82,7 @@ def load_test_files() -> list:
                 files.append((label, full_path, os.path.getsize(full_path)))
 
     if not files:
-        print(f"[ERROR] No files found in {metgm_dir}/andøya or {metgm_dir}/setermoen")
+        print(f"[ERROR] No files found in {metgm_dir}/LOCATION-NAME-1 or {metgm_dir}/LOCATION-NAME-2")  ## PLACEHOLDER NAMES
         sys.exit(1)
 
     print(f"[SETUP] Found {len(files)} METGM file(s):")
