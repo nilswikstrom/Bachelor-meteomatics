@@ -71,9 +71,9 @@ def script_dir() -> str:
 
 
 def load_test_files() -> list:
-    """Return sorted list of (filename, filepath, filesize) from METCM/andøya/ and METCM/setermoen/."""
+    """Return sorted list of (filename, filepath, filesize) from METCM/LOCATION-NAME-1/ and METCM/LOCATION-NAME-2/."""  ## PLACEHOLDER NAMES
     metcm_dir = os.path.join(script_dir(), "METCM")
-    subfolders = ["andøya", "setermoen"]
+    subfolders = ["LOCATION-NAME-1", "LOCATION-NAME-2"]  ## PLACEHOLDER NAMES
 
     files = []
     for subfolder in subfolders:
