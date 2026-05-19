@@ -1,14 +1,12 @@
-# Code Appendix: FREYA - Meteomatics Bachelor
+# Code Appendix: FREYA - Bachelor thesis
 
 This repository contains the source code developed as part of the bachelor's thesis *"[Title]"* at The Norwegian Cyber Defense University College, submitted May 2026. The thesis was made in collaboration with NORCE Research and Meteomatics.
 
 ## Authors
 
-- Nils Christian Wikstrøm – api-client
-- Stian Sivertsen Loddengaard – diode-rx, diode-tx
-- Ina Utne Skogdalen – docs
-
-A detailed per-file attribution is available in `CONTRIBUTORS.md`.
+- Nils Christian Wikstrøm – api-client, docs
+- Stian Sivertsen Loddengaard – diode-rx, diode-tx, docs
+- Ina Utne Skogdalen
 
 ## About the project
 
@@ -23,7 +21,7 @@ For a full description of the system architecture, design choices, and results, 
 | `api-client/` | Retrieval and processing of weather data from external API  |
 | `diode-tx/`   | Transmitter side: packaging and transmission over diode     |
 | `diode-rx/`   | Receiver side: reception, validation, and storage           |
-| `docs/`       | Supplementary documentation                                 |
+| `docs/`       | Test matrixes for the project                               |
 
 ## Dependencies
 
@@ -44,10 +42,6 @@ pip install -r requirements.txt
 ```
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
-
-## Usage
-
-See the README within each directory for module-specific instructions.
 
 ## Citing this code
 
