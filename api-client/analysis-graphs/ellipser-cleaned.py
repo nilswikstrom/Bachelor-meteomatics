@@ -62,7 +62,7 @@ FARGE = {
     "METCM (fra METGC)":     "#27ae60",
 }
 
-TITTEL = "ODIN FSS — Predikerte spredningsellipser\nSetermoen"
+TITTEL = "<<name-of-artillery fire management system>> — Predikerte spredningsellipser\nSetermoen"
 
 # ============================================================
 # ====== HERUNDER TRENGER DU IKKE Å ENDRE NOE ================
