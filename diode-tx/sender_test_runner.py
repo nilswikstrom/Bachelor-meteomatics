@@ -6,12 +6,12 @@ Reads all files from the METCM/ subfolder — no hardcoded filenames.
 
 Usage:
     python sender_test_runner.py --ip 192.168.10.10 --port 5001 --config baseline
-    python sender_test_runner.py --ip 192.168.10.10 --port 5001 --config tyr_pa --delay-between 5
+    python sender_test_runner.py --ip 192.168.10.10 --port 5001 --config <<name-of-IT-system>>_pa --delay-between 5  ## CHANGE <<name-of-IT-system>>
 
 Arguments:
     --ip             : Receiver IP address
     --port           : UDP port
-    --config         : Configuration label stored in CSV (e.g. "baseline" or "tyr_pa")
+    --config         : Configuration label stored in CSV (e.g. "baseline" or "<<name-of-IT-system>>_pa")  # CHANGE <<name-of-IT-system>>
     --delay-between  : Seconds to wait between runs so receiver can reset (default: 3)
 
 File layout expected:
@@ -211,7 +211,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Automated UDP transfer test runner.")
     parser.add_argument("--ip", required=True, help="Receiver IP address")
     parser.add_argument("--port", type=int, required=True, help="UDP port")
-    parser.add_argument("--config", required=True, help="Configuration label (baseline / tyr_pa)")
+    parser.add_argument("--config", required=True, help="Configuration label (baseline / <<name-of-IT-system>>_pa)")  # CHANGE <<name-of-IT-system>>
     parser.add_argument("--delay-between", type=int, default=3, dest="delay_between",
                         metavar="SECONDS", help="Seconds between runs (default: 3)")
     return parser.parse_args()
