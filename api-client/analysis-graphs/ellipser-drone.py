@@ -23,23 +23,24 @@ import matplotlib.patches as mpatches
 # Per avstand: dict { format: (mean_range, mean_cross) }   ← FULL diameter
 
 AVSTANDER = {
+    ## Placeholder numbers and locations, replace with real numbers and location names
     "10 km": {
-        "Ingen vær (kontroll)": (52.64, 20.78),
-        "Setermoen":            (68.21, 22.58),
-        "Andøya":               (65.83, 20.74),
+        "Ingen vær (kontroll)":  (aa.aa, bb.bb),
+        "LOCATION-NAME 1":       (cc.cc, dd.dd),
+        "LOCATION-NAME 2":       (ee.ee, ff.ff),
+        "LOCATION-NAME 3":       (gg.gg, hh.hh),
     },
     "20 km": {
-        "Ingen vær (kontroll)": (133.45, 27.58),
-        "Setermoen":            (201.56, 38.70),
-        "Andøya":               (190.71, 28.14),
-        "Harstad":              (262.32, 36.46),
+        "Ingen vær (kontroll)":  (iii.ii, jjj.jj),
+        "LOCATION-NAME 1":       (kkk.kk, lll.ll),
+        "LOCATION-NAME 2":       (mmm.mm, nnn.nn),
+        "LOCATION-NAME 3":       (ooo.oo, ppp.pp),
     },
     "30 km": {
-        "Ingen vær (kontroll)": (246.86, 37.10),
-        "Setermoen":            (369.62, 48.54),
-        "Andøya":               (312.73, 36.82),
-        "Harstad":              (262.32, 36.46),
-
+        "Ingen vær (kontroll)":  (qqq.qq, rrr.rr),
+        "LOCATION-NAME 1":       (sss.ss, ttt.tt),
+        "LOCATION-NAME 2":       (uuu.uu, vvv.vv),
+        "LOCATION-NAME 3":       (www.ww, xxx.xx),
     },
 }
 
@@ -47,21 +48,21 @@ VIS_AVSTANDER = ["10 km", "20 km", "30 km"]
 
 VIS_FORMATER = [
     "Ingen vær (kontroll)",
-    "Setermoen",
-    "Andøya",
-    "Harstad",   # ← fjern # for å inkludere igjen
+    "LOCATION-NAME 1",
+    "LOCATION-NAME 2",
+    "LOCATION-NAME 3",   # ← fjern # for å inkludere igjen
 ]
 
 TREFF_RADIUS_M = 70   # treffområdets radius (m)
 
 FARGE = {
     "Ingen vær (kontroll)":  "#7f8c8d",
-    "Setermoen":    "#2980b9",
-    "Andøya":     "#c0392b",
-    "Harstad":     "#27ae60",
+    "LOCATION-NAME 1":    "#2980b9",
+    "LOCATION-NAME 2":     "#c0392b",
+    "LOCATION-NAME 3":     "#27ae60",
 }
 
-TITTEL = "ODIN FSS — Predikerte spredningsellipser\nSetermoen"
+TITTEL = "<<name-of-artillery fire management system>> — Predikerte spredningsellipser\nSetermoen"
 
 # ============================================================
 # ====== HERUNDER TRENGER DU IKKE Å ENDRE NOE ================
