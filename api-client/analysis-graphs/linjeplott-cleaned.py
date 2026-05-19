@@ -21,26 +21,27 @@ import numpy as np
 AVSTANDER = [10, 20, 30]  # km
 
 DATA = {
+  # Placeholder values, replace with real numbers
     "Ingen vær (kontroll)": [
         # (mean_r, std_r, mean_c, std_c)
-        (52.64,  0.0, 20.78, 0.0),   # 10 km
-        (133.45, 0.0, 27.58, 0.0),   # 20 km
-        (246.86, 0.0, 37.10, 0.0),   # 30 km
+        (mean_r,  std_r, mean_c, std_c),   # 10 km
+        (mean_r,  std_r, mean_c, std_c),   # 20 km
+        (mean_r,  std_r, mean_c, std_c),   # 30 km
     ],
     "METCM målt (drone)": [
-        (68.21,  10.04, 22.58,  1.80),
-        (201.56, 79.21, 38.70,  9.21),
-        (369.62, 155.93, 48.54, 9.90),
+        (mean_r,  std_r, mean_c, std_c),
+        (mean_r,  std_r, mean_c, std_c),
+        (mean_r,  std_r, mean_c, std_c),
     ],
     "METCM (fra METGM)": [
-        (58.74,   4.37, 21.36,  0.53),
-        (171.18, 36.71, 34.31,  4.22),
-        (320.99, 74.61, 60.06, 23.26),
+        (mean_r,  std_r, mean_c, std_c),
+        (mean_r,  std_r, mean_c, std_c),
+        (mean_r,  std_r, mean_c, std_c),
     ],
     "METCM (fra METGC)": [
-        (81.69,   49.80, 21.55,  0.46),
-        (307.28, 289.27, 38.20,  7.54),
-        (583.75, 555.50, 66.64, 22.38),
+        (mean_r,  std_r, mean_c, std_c),
+        (mean_r,  std_r, mean_c, std_c),
+        (mean_r,  std_r, mean_c, std_c),
     ],
 }
 
@@ -58,7 +59,7 @@ STYLE = {
     "METCM (fra METGC)":     {"color": "#27ae60", "linestyle": (0,(2,1))},
 }
 
-TITTEL = "ODIN FSS — Predikert spredning per filkategori\nSetermoen"
+TITTEL = "<<name-of-artillery fire management system>> — Predikert spredning per filkategori\nSetermoen"
 
 # ============================================================
 # ====== HERUNDER TRENGER DU IKKE Å ENDRE NOE ================
