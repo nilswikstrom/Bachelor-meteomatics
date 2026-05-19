@@ -1,6 +1,6 @@
 # Code Appendix: FREYA - Bachelor thesis
 
-This repository contains the source code developed as part of the bachelor's thesis *"[Title]"* at The Norwegian Cyber Defense University College, submitted May 2026. The thesis was made in collaboration with NORCE Research and Meteomatics.
+This repository contains the source code developed as part of the bachelor's thesis *"Portering av ugraderte værdata fra drone til FSP TYR"* at The Norwegian Cyber Defense University College, submitted May 2026. The thesis was made in collaboration with NORCE Research and Meteomatics.
 
 ## Authors
 
