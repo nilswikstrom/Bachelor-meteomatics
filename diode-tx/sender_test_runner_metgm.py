@@ -6,7 +6,7 @@ Reads all METGM files from METGM/andøya/ and METGM/setermoen/.
 
 Usage:
     python sender_test_runner_metgm.py --ip 172.16.3.40 --port 5001 --config metgm_baseline
-    python sender_test_runner_metgm.py --ip 172.16.3.40 --port 5001 --config metgm_tyr_pa
+    python sender_test_runner_metgm.py --ip 172.16.3.40 --port 5001 --config metgm_<<name-of-IT-system>>_pa  ## CHANGE <<name-of-IT-system>>
 
 File layout expected:
     script/
@@ -206,7 +206,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Automated UDP transfer test runner for METGM files.")
     parser.add_argument("--ip", required=True, help="Receiver IP address")
     parser.add_argument("--port", type=int, required=True, help="UDP port")
-    parser.add_argument("--config", required=True, help="Configuration label (metgm_baseline / metgm_tyr_pa)")
+    parser.add_argument("--config", required=True, help="Configuration label (metgm_baseline / metgm_<<name-of-IT-system>>_pa)")  ## CHANGE <<name-of-IT-system>>
     parser.add_argument("--delay-between", type=int, default=3, dest="delay_between",
                         metavar="SECONDS", help="Seconds between runs (default: 3)")
     return parser.parse_args()
