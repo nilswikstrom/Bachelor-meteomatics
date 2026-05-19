@@ -111,7 +111,7 @@ $workerScript = {
 
 # -- Form --
 $form = New-Object System.Windows.Forms.Form
-$form.Text            = "METCM / METGM MOTTAKER - FSP Tyr"
+$form.Text            = "METCM / METGM MOTTAKER - <<name-of-IT-system>>"
 $form.BackColor       = $BG
 $form.ForeColor       = $WHT
 $form.Font            = $FMONO
@@ -137,7 +137,7 @@ $lblTitle.AutoSize  = $true
 $pnlHeader.Controls.Add($lblTitle)
 
 $lblSub = New-Object System.Windows.Forms.Label
-$lblSub.Text      = "FSP Tyr  .  Enveis UDP-mottaker  .  STANAG 4082 / 6022"
+$lblSub.Text      = "FSP <<name-of-IT-system>>  .  Enveis UDP-mottaker  .  STANAG 4082 / 6022"
 $lblSub.Font      = $FSMALL
 $lblSub.ForeColor = $DIM
 $lblSub.BackColor = [System.Drawing.Color]::Transparent
