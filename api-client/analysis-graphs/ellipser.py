@@ -23,23 +23,24 @@ import matplotlib.patches as mpatches
 # Per avstand: dict { format: (mean_range, mean_cross) }   ← FULL diameter
 
 AVSTANDER = {
+  ## Placeholder numbers, replace with real numbers
     "10 km": {
-        "Ingen vær (kontroll)":  (52.64, 20.78),
-        "METCM målt (drone)":    (68.21, 22.58),
-        "METCM (fra METGM)":     (58.74, 21.36),
-        "METCM (fra METGC)":     (81.69, 21.55),
+        "Ingen vær (kontroll)":  (aa.aa, bb.bb),
+        "METCM målt (drone)":    (cc.cc, dd.dd),
+        "METCM (fra METGM)":     (ee.ee, ff.ff),
+        "METCM (fra METGC)":     (gg.gg, hh.hh),
     },
     "20 km": {
-        "Ingen vær (kontroll)":  (133.45, 27.58),
-        "METCM målt (drone)":    (201.56, 38.70),
-        "METCM (fra METGM)":     (171.18, 34.31),
-        "METCM (fra METGC)":     (307.28, 38.20),
+        "Ingen vær (kontroll)":  (iii.ii, jjj.jj),
+        "METCM målt (drone)":    (kkk.kk, lll.ll),
+        "METCM (fra METGM)":     (mmm.mm, nnn.nn),
+        "METCM (fra METGC)":     (ooo.oo, ppp.pp),
     },
     "30 km": {
-        "Ingen vær (kontroll)":  (246.86, 37.10),
-        "METCM målt (drone)":    (369.62, 48.54),
-        "METCM (fra METGM)":     (320.99, 60.06),
-        "METCM (fra METGC)":     (583.75, 66.64),
+        "Ingen vær (kontroll)":  (qqq.qq, rrr.rr),
+        "METCM målt (drone)":    (sss.ss, ttt.tt),
+        "METCM (fra METGM)":     (uuu.uu, vvv.vv),
+        "METCM (fra METGC)":     (www.ww, xxx.xx),
     },
 }
 
@@ -61,7 +62,7 @@ FARGE = {
     "METCM (fra METGC)":     "#27ae60",
 }
 
-TITTEL = "ODIN FSS — Predikerte spredningsellipser\nSetermoen"
+TITTEL = "<<name-of-artillery fire management system>> — Predikerte spredningsellipser\nSetermoen"
 
 # ============================================================
 # ====== HERUNDER TRENGER DU IKKE Å ENDRE NOE ================
