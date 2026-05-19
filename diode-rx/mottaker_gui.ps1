@@ -137,7 +137,7 @@ $lblTitle.AutoSize  = $true
 $pnlHeader.Controls.Add($lblTitle)
 
 $lblSub = New-Object System.Windows.Forms.Label
-$lblSub.Text      = "FSP <<name-of-IT-system>>  .  Enveis UDP-mottaker  .  STANAG 4082 / 6022"
+$lblSub.Text      = "<<name-of-IT-system>>  .  Enveis UDP-mottaker  .  STANAG 4082 / 6022"
 $lblSub.Font      = $FSMALL
 $lblSub.ForeColor = $DIM
 $lblSub.BackColor = [System.Drawing.Color]::Transparent
