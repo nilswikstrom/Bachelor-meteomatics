@@ -4,14 +4,14 @@
 # ============================================================
 
 # --- KONFIGURASJON: fyll inn dine egne stier her ---
-$loggMappe  = "C:\ProgramData\KDA\ODIN_FSS\logs\Fire Support XML Log"  # Folder where XML-files are found
-$outputFil  = "E:\Bachelor\ODIN-loghogger\treffbilde_logg.csv"         # Path to collected logfile (CSV)
+$loggMappe  = "PATH-TO-LOGFILE"  # Folder where XML-files are found
+$outputFil  = "PATH-TO-OUTPUT-FILE\loghogger\treffbilde_logg.csv"  # Path to collected logfile (CSV)
 
 # File names that needs to be read (in preferred order: target 1, 2, 3)
 $xmlFiler = @(
-    "AA0001_Solution_fixed_and_status.xml",
-    "AA0002_Solution_fixed_and_status.xml",
-    "AA0003_Solution_fixed_and_status.xml"
+    "TARGET-NO_Solution_fixed_and_status.xml",  # Target 1
+    "TARGET-NO_Solution_fixed_and_status.xml",  # Target 2
+    "TARGET-NO_Solution_fixed_and_status.xml"  # Target 3
 )
 
 # ------------------------------------------------------------
