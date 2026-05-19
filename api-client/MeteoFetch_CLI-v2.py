@@ -15,8 +15,10 @@ STEP = "PT1H"   # PT1H | PT3H | PT6H | PT12H | PT24H
 
 # NAME-OF-LOCATION
 PERIODS = [
-    ("start-YYYY-MM-DDTHH:MM:SSZ", "end-YYYY-MM-DDTHH:MM:SSZ"),
-    ("start-YYYY-MM-DDTHH:MM:SSZ", "end-YYYY-MM-DDTHH:MM:SSZ"),
+    # Placeholder values, replace with real timeslots
+    # Format: YYYY-MM-DDTHH:MM:SSZ
+    ("start-timestamp", "end-timestamp"),
+    ("start-timestamp", "end-timestamp"),
     # ... etc. as mmany timeslots as you want
 ]
 
